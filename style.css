@@ -1,0 +1,141 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fff5f8, #f5efff, #fff0f5);
+    min-height: 100vh;
+    padding: 50px 20px;
+    color: #49364f;
+}
+
+
+
+body > div {
+    max-width: 1000px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 45px;
+    border-radius: 28px;
+    box-shadow: 0 15px 50px rgba(160, 100, 150, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+
+header {
+    text-align: center;
+    margin-bottom: 45px;
+    padding: 30px 15px;
+    background: linear-gradient(135deg, #f9d9e8, #e9dafa);
+    border-radius: 22px;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: "✿";
+    position: absolute;
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.25);
+    top: -35px;
+    left: 15px;
+}
+
+header::after {
+    content: "✧";
+    position: absolute;
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.3);
+    bottom: -55px;
+    right: 20px;
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #814d79;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 0.5px;
+}
+
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+
+nav a {
+    text-decoration: none;
+    text-align: center;
+    padding: 22px 10px;
+    background: #fff8fc;
+    color: #95658e;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #f3dce9;
+    border-radius: 16px;
+
+    box-shadow: 0 5px 12px rgba(190, 130, 170, 0.06);
+
+    transition: all 0.3s ease;
+}
+
+
+nav a:hover {
+    background: linear-gradient(135deg, #e9b5d1, #cbb4ee);
+    color: white;
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 12px 22px rgba(180, 110, 170, 0.2);
+
+    border-color: transparent;
+}
+
+nav a:active {
+    transform: scale(0.96);
+}
+
+
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 25px 12px;
+    }
+
+    body > div {
+        padding: 25px 18px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    nav a {
+        padding: 18px 8px;
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 350px) {
+
+    nav {
+        grid-template-columns: 1fr;
+    }
+
+}
